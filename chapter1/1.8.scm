@@ -1,0 +1,12 @@
+(define (newcbrt x)
+  (define (average lhs rhs)
+	(/ (+ lhs rhs) 2))
+  (define (good-enough? guess oldguess)
+	(< (abs (- 1 (/ guess oldguess))) .0000000000000001))
+  (define (improve guess)
+	(average guess (/ (+ (/ x (* guess guess)) (* 2 guess)) 3)))
+  (define (try guess oldguess)
+	(if (good-enough? guess oldguess)
+	  guess
+	  (try (improve guess) guess)))
+  (try 1.0 5.0))

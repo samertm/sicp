@@ -1,0 +1,3 @@
+With applicative-order evaluation, the expression will return 0, because x is equal to 0, and it doesn't need to evaluate y. With normal-order evaluation, the program will crash because (p) evaluates to itself, and has no primitive form.
+
+Never mind--in applicative-order evaluation the program will crash, because applicative-order means it applies everything before it uses them. Normal-order means it only applies things when it uses them.
