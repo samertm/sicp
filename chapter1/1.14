@@ -1,5 +1,7 @@
 ;; from file coins.scm
 
+The procedure is Theta(n^2) because it doubles on every step.
+
 (count 11)
 
 (+ (cc 11 4) (cc -40 5))
