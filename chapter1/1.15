@@ -1,0 +1,21 @@
+The procedure is applied five times when (sine 12.15) is evaluated.
+
+(sine 12.15)
+
+(p (sine 4.05))
+
+(p (p (sine 1.349)))
+
+(p (p (p (sine .45))))
+
+(p (p (p (p (sine .15)))))
+
+(p (p (p (p (p .05)))))
+
+For (pow a), the number of steps and the growth in space is n, where n = ln(a / 3)
+
+a / 3^n = 1
+a = 3^n
+ln(a) = n * ln(3)
+n = ln(a / 3)
+
